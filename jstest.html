@@ -1,0 +1,67 @@
+<!DOCTYPE HTML> 
+<html lang="en-US"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Easy JavaScript Testing </title> 
+    <style> 
+        .pass:before { 
+            content: 'PASS: '; 
+            color:  blue; 
+            font-weight: bold; 
+        } 
+  
+        .fail:before { 
+            content: 'FAIL: '; 
+            color: red; 
+            font-weight: bold; 
+  
+        } 
+    </style> 
+</head> 
+<body> 
+  
+<ul id="output"></ul> 
+  
+<script> 
+var output = document.getElementById('output'); 
+  
+function assert( outcome, description ) { 
+    var li = document.createElement('li'); 
+    li.className = outcome ? 'pass' : 'fail'; 
+    li.appendChild( document.createTextNode( description ) ); 
+  
+    output.appendChild(li); 
+}; 
+</script>
+
+
+
+<script>//without using closure
+    var someArray = [1,2,3,4,5],
+    len = someArray.length,
+    i = 0;
+
+    //var count = 0;
+
+    for ( ; i < len; i++ ) { 
+        setTimeout(function() { 
+            assert( true, 'Checking the value of: ' + i ); 
+        }, i * 300); 
+    }//i doesn't increment
+</script>
+
+
+
+<script>//using closure
+    var someArray2 = [1,2,3,4,5],
+    len2 = someArray2.length,
+    i2 = 0;
+
+    var count = 0;
+
+    for (;i2 < len2; i2++) (function(i2){
+        setTimeout(function(){
+            assert(/*true*/ count++ === i2, 'checking value of i2: ' + i2);
+        },i2 * 300);
+    })(i2);//i now increments as we are passing it to the function
+</script>

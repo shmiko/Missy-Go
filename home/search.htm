@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">@import url("/custom404/css/stylesheet.css");</style>
+    <style type="text/css">@import url("/custom404/css/red.css");</style>
+    <style type="text/css">@import url("/custom404/css/bootstrap.css");</style>
+    <style type="text/css">@import url("/custom404/css/home.css");</style>
+        
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="/custom404/js/bootstrap.js"></script>
+    <!-- PNGFix for IE6 -->
+        <script type="text/javascript" src="/custom404/js/jquery-1.7.2.min.js"></script> 
+        
+        <!-- Active pngfix -->
+        <script type="text/javascript"> 
+            $(document).ready(function(){ 
+        }); 
+        </script> 
+    
+    <meta itemprop="name" content="DaveDaveFind">
+    <meta itemprop="image" content="http://davedavefind.appspot.com/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Missy-Go</title>
+   
+</head>
+<body>
+    <div class="container">
+	    <div class="row">
+		    <div class="span6 offset6" id="searchdiv">
+		        <h1>Missy-<strong class="orange">Go</strong></h1>
+		        <form action="/search" method="GET" id="searchbox" class="well form-search" placeholder="Search">
+  				    <input id="searchinput" type="text" name="search_query">
+  				    <button type="submit" class="btn-sm btn-warning smpad" value="Missy-Go"><i class="icon-search icon-white smallfont"></i> Go-Missy</button>
+			    </form>
+		    </div>
+	    </div>
+        <div>
+            <strong>Missy-<span class="orange">Go</span></strong> is getting built by 
+            <a href="http://twitter.com/shmiko/">Paul Jones</a> 
+            <br>
+            <span>This has been copied from <a href="http://github.com/ecmendenhall/DaveDaveFind">DaveDaveFind</a> GitHub,</span>
+            <span> but is just being used as a start to deploy my own code.</a></span>
+            
+            <p>
+             You can learn to make your own search engine in <a href="http://www.udacity.com/overview/Course/cs101">CS101</a>, learn about web applications like this one in <a href="http://www.udacity.com/overview/Course/cs253/">CS253</a>, read more about the original project ( DaveDaveFind ) on its <a href="http://davedavefind.tumblr.com/">development blog</a>, or see the code on <a href="http://github.com/ecmendenhall/DaveDaveFind">GitHub</a>.</p><br>
+
+            <p>The search crawler and web application were written in <a href="http://python.org">Python</a>, using the <a href="http://bottlepy.org/docs/dev/">WebApp2</a> web framework on <a href="https://developers.google.com/appengine/">Google App Engine</a>. The crawler code uses <a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> to read HTML, <a href="http://nikitathespider.com/python/rerp/">Nikita the Spider</a> to read robots.txt files, and the <a href="http://duckduckgo.com/api.html">DuckDuckGo API</a> to search Python documentation. 
+            Pages are styled with <a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> and enhanced by <a href="http://glyphicons.com/">Glyphicons</a>.</p>
+        </div>
+        <br>
+        <div>
+            <p><strong>Missy-<span class="orange">Go</span></strong> searches the full-text of the <a href="http://udacity.com/">Udacity website</a>, <a href="http://www.udacity-forums.com/cs101/">CS101 forums</a>, course documents, and lecture transcripts. It supports multi-word lookup (but sometimes delivers better results for single words).</p>
+            <p>If your search query is found in a video transcript, it will try to link inside the video to the moment the query occurs. If your search query is a common Python-related term, it will try to look up information in the Python documentation. Try searching for the name of a built-in function or standard library module, like <code>str</code> or <code>urllib</code>.</P>
+            <p>The search box also accepts commands inspired by <a href="http://duckduckgo.com/bang.html">bang syntax</a>. Try typing <code>--forum</code> before your search query to search the CS101 discussion forum, <code>--python</code> to search Python documentation, or <code>--daverank</code> to show the DaveRank‌™ for each result underneath its URL.</p> 
+        </div>
+        </p>
+        <span>Oh Bye the way - it still not ready!</span>
+    </div>
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="DaveDaveFind: the search engine Udacity promised!" data-related="ecmendenhall">Tweet</a>
+       
+    </div>
+</body>
+</html>
